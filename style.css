@@ -117,6 +117,13 @@ body {
     background-color: #088178;
     
 }
+#close{
+    display: none;
+}
+#mobile{
+    display: none;
+    align-items: center;
+}
 #hero{
     background-image: url("img/hero4.png");
     height: 90vh;
@@ -401,6 +408,7 @@ body {
     font-size: 14px;
     font-weight: 700;
     margin-left: 10px;
+    cursor: pointer;
 }
 footer {
     background-color: #f2f2f2;
@@ -438,4 +446,49 @@ footer {
 .legal-info a {
     text-decoration: none;
     color: #333;
+}
+@media (max-width:799px){
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    #navbar.active {
+        right: 0;
+        }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        font-size: 21px;
+        color: #1a1a1a;
+        padding-left: 20px;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 21px;
+        color: #1a1a1a;
+        padding: 20px;
+        cursor: pointer;
+    }
+    #lg-bag{
+        display: none;
+    }
 }
